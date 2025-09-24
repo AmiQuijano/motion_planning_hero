@@ -23,7 +23,7 @@ class CameraRecorder(Node):
         super().__init__("camera_recorder")
 
         # Get package path
-        package_share_path = get_package_share_directory("motion_planning_trajectory_execution")
+        package_share_path = get_package_share_directory("motion_planning_hero")
         print("PKG DONE")
 
         # Load YAML config file
@@ -49,7 +49,7 @@ class CameraRecorder(Node):
         file_name = self.camera_recorder_cfg["save_file"]
 
         # Start Realsense
-        self.realsense_data = RealsenseDataloader(clipping_distance_m=clipping_distance, serial_number="233522074308")
+        self.realsense_data = RealsenseDataloader(clipping_distance_m=clipping_distance, serial_number="827312073365")
 
         # TF listener
         # self.tf_buffer = Buffer()
