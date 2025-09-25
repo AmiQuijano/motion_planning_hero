@@ -37,6 +37,7 @@ setup(
             #f'nvblox_mapper = {package_name}.nodes.nvblox_mapper:main', 
             #f'camera_recorder = {package_name}.nodes.camera_recorder:main', 
             f'test_camera_node = {package_name}.utils.test_camera_node:main', 
+            f'test_camera_node2 = {package_name}.utils.test_camera_node_rs2:main', 
         ],
     },
 )

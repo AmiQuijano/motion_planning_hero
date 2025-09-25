@@ -1,5 +1,5 @@
 # Camera serial number
-serial_number: "333422303080" #"341522301530" #
+serial_number: "827312073365" #"333422303080" #"341522301530" #
 
 # Get transforms of frame_a wrt frame_b
 frame_a: "camera_color_optical_frame"
@@ -12,7 +12,7 @@ save_rate: 10
 max_frames: 100
 
 # Name of the .pt file with camera depth, intrinsics and pose data
-save_file: "camera_data_test_hero.pt"
+save_file: "camera_data_test_hero2.pt"
 
 # Maximum depth distance in [m] 
 clipping_distance: 0.5

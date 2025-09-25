@@ -18,19 +18,19 @@ from ament_index_python.packages import get_package_share_directory
 from motion_planning_hero.utils.realsense_dataset import RealsenseDataloader
 # from nvblox_torch.datasets.realsense_dataset import RealsenseDataloader
 
-class CameraRecorder(Node):
-    def __init__(self, camera_recorder_config=None):
-        super().__init__("camera_recorder")
+class CameraRecorder2(Node):
+    def __init__(self, camera_recorder_config2=None):
+        super().__init__("camera_recorder2")
 
         # Get package path
         package_share_path = get_package_share_directory("motion_planning_hero")
         print("PKG DONE")
 
         # Load YAML config file
-        if camera_recorder_config is None:
-            cfg_path = os.path.join(package_share_path, "configs", "camera_recorder_config.yaml")
+        if camera_recorder_config2 is None:
+            cfg_path = os.path.join(package_share_path, "configs", "camera_recorder_config2.yaml")
         else:
-            cfg_path = os.path.join(package_share_path, "configs", camera_recorder_config)
+            cfg_path = os.path.join(package_share_path, "configs", camera_recorder_config2)
 
         try:
             with open(cfg_path, "r", encoding="utf-8") as f:
@@ -84,7 +84,7 @@ class CameraRecorder(Node):
             cv2.convertScaleAbs(depth_np, alpha=100), cv2.COLORMAP_VIRIDIS
         )
         stacked = cv2.hconcat([color_np, depth_colormap])
-        cv2.imshow("Camera Recording: Color + Depth", stacked)
+        cv2.imshow("Camera Recording: Color + Depth 2", stacked)
         key = cv2.waitKey(1)
         return key
 
@@ -196,7 +196,7 @@ class CameraRecorder(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = CameraRecorder()
+    node = CameraRecorder2()
     node.run()
     node.destroy_node()
     rclpy.shutdown()
